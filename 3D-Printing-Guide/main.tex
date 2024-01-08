@@ -1,0 +1,61 @@
+%%% Editar na main apenas o que estiver com comentário em maiúsculas
+%%% Nos editáveis, é recomendado que se altere os títulos com *
+%%% Colocar imagens dentro da pasta Imagens na pasta Editáveis
+
+\input{Fixos/preambulo.tex}
+
+\usepackage{blindtext}
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\textbf{\Huge Processo Seletivo Extraordinário}\\ [0.8cm]
+\textbf{\Large Luis Eduardo C. M. de Lima}\\[0.3cm]  %%% SUBTÍTULO (se necessário)
+\textbf{\Large 2022-01}\\
+\end{center}
+
+%%% autores na capa jogam imagem para baixo
+% \setlength{\hsize}{0.5\hsize}
+% \begin{flushleft}
+% \noindent \textbf{Autores:} \blindtext
+% \end{flushleft}
+% \setlength{\hsize}{2\hsize}
+
+
+\vspace{200pt}
+\includegraphics[width=120pt,right]{Fixos/imagens/Logo_EDRA - Atual.png}
+
+\par
+\vfill
+\begin{center}
+{{\normalsize Brasília}\\  %%% CIDADE
+{\normalsize 22 de setembro de 2022}}  %%% DATA
+\end{center}
+\end{titlepage}
+
+\newpage
+\input{Editáveis/00contra_capa.tex}
+
+%Sumário
+\newpage
+\renewcommand{\contentsname}{\centering Sumário}
+\tableofcontents
+%End Sumário
+
+\newpage
+\input{Editáveis/01intro}
+\newpage
+\input{Editáveis/02desenvolv}
+\newpage
+\input{Editáveis/03conclusao}
+
+\newpage
+%\bibliography{referencias}
+
+\newpage
+\input{Editáveis/04apendices.tex}
+\newpage
+\input{Editáveis/05anexos.tex}
+
+\end{document}
+

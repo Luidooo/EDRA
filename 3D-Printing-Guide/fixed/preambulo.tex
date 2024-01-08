@@ -1,0 +1,84 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{subcaption}
+
+% \usepackage{biblatex}
+% \addbibresource{refs.bib}
+\usepackage[alf]{abntex2cite}
+\usepackage{array}
+
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\usepackage{pdflscape}
+
+\setlength{\marginparwidth }{2cm}
+
+\usepackage{ragged2e}
+
+%%% marca d'água da capa
+\usepackage[firstpage]{draftwatermark}
+\SetWatermarkText{\includegraphics[width=\paperwidth]{Fixos/imagens/Capa.png}}
+\SetWatermarkScale{1}
+\SetWatermarkAngle{0}
+
+%%% cabeçalho e rodapé
+\usepackage{fancyhdr}
+ \pagestyle{fancy}
+ % \geometry{a4paper, includehead, top=0cm, left=0cm}
+ \geometry{a4paper, includehead, top=0cm, left=3cm,right=2cm,bottom=5.4cm}
+
+\addtolength{\headheight}{2cm}
+
+\fancyhfoffset[L]{3cm}
+\fancyhfoffset[R]{2cm}
+
+\fancyhf{}
+\chead{\includegraphics[width=\headwidth]{Fixos/imagens/Cabeçalho.png}} % ou width=21.5cm
+\cfoot{\thepage \\ \includegraphics[width=\headwidth]{Fixos/imagens/Rodapé.png}} % \hspace{2.5cm} \thepage \\
+\renewcommand{\headrulewidth}{0pt}
+
+
+%%% p/ fazer lista com números em negrito
+\usepackage{enumitem}
+
+%%% p/ tachar, usar \sout{}
+\usepackage{ulem}
+
+%%% colocar imagens p/ direita e esquerda (usar: \includegraphics[width=.6\textwidth,left]{example-image}):
+\usepackage[export]{adjustbox}
+
+% %%% enumerate para o Regimento e similares
+% \renewcommand{\labelenumi}{\textbf{\Alph{enumi}.}}
+% \renewcommand{\theenumi}{\textbf{\Alph{enumi}}}
+% \renewcommand{\labelenumii}{\roman{enumii}.}
+% \renewcommand{\theenumii}{\roman{enumii}}
+
+%%% Apêndices
+\newcounter{apend}[section]
+\renewcommand{\theapend}{\textbf{\Alph{apend}}}
+\newenvironment{apendice}[1][]{\refstepcounter{apend}\par\medskip
+   \noindent \textbf{\Large Ap\^endice~\theapend~-- #1} \\ \\
+   \addcontentsline{toc}{section}{Ap\^endice~\theapend~-- #1}
+   }{\medskip \newpage}
+
+%%% Anexos
+\newcounter{anex}[section]
+\renewcommand{\theanex}{\textbf{\Alph{anex}}}
+\newenvironment{anexo}[1][]{\refstepcounter{anex}\par\medskip
+   \noindent \textbf{\Large Anexo~\theanex~-- #1} \\ \\
+   \addcontentsline{toc}{section}{Anexo~\theanex~-- #1}
+   }{\medskip \newpage}
