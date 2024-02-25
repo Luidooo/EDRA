@@ -7,7 +7,6 @@ tello = tello.Tello()
 tello.connect()
 print(tello.get_battery())
 
-tello.takeoff()
 
 def getKeyboardInput():
     lr, fb, ud, yv = 0, 0, 0, 0
@@ -28,5 +27,5 @@ def getKeyboardInput():
 
 while True:
     vals = getKeyboardInput()
-    me.send_rc_control(vals[0], vals[1], vals[2], vals[3])
+    tello.send_rc_control(vals[0], vals[1], vals[2], vals[3])
     sleep(0.05)
